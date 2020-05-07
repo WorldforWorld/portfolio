@@ -22,8 +22,6 @@
     padding: 20px
     border-color: $textcolor 
     background: transparent!important
-    &:hover
-      background: $textcolor !important
   &__relation
     display: flex
     flex-direction: row
@@ -46,23 +44,6 @@
         width: 15px
         margin-right: 5px
         margin-left: 5px
-      &:hover
-        &::before
-          content: ''
-          width: 27px
-          height: 2px
-          position: absolute
-          display: flex
-          top: 50%
-          left: -33px
-          background: $textcolor
-        &::after
-          content: ''
-          width: 27px
-          height: 2px
-          display: flex
-          align-self: center
-          background: $textcolor
     &__form
       width: 30%
       padding: 30px

@@ -573,11 +573,8 @@ div#userQuestion-error {
     margin-bottom: 20px; }
     .portfolio__categories a {
       margin: 20px;
-      padding-bottom: 3px;
       text-decoration: none;
       color: #ffffff; }
-    .portfolio__categories__active {
-      border-bottom: 1px solid #ffffff; }
   .portfolio__list {
     display: flex;
     flex-wrap: wrap;
@@ -626,6 +623,9 @@ div#userQuestion-error {
       border-radius: 10px;
       text-align: center; }
 
+a.portfolio__categories__active {
+  text-decoration: underline; }
+
 .public {
   display: flex;
   flex-direction: column;
@@ -650,8 +650,6 @@ div#userQuestion-error {
     padding: 20px;
     border-color: #ffffff;
     background: transparent !important; }
-    .public__buttons:hover {
-      background: #ffffff !important; }
   .public__relation {
     display: flex;
     flex-direction: row;
@@ -674,22 +672,6 @@ div#userQuestion-error {
         width: 15px;
         margin-right: 5px;
         margin-left: 5px; }
-      .public__contacts__link:hover::before {
-        content: '';
-        width: 27px;
-        height: 2px;
-        position: absolute;
-        display: flex;
-        top: 50%;
-        left: -33px;
-        background: #ffffff; }
-      .public__contacts__link:hover::after {
-        content: '';
-        width: 27px;
-        height: 2px;
-        display: flex;
-        align-self: center;
-        background: #ffffff; }
     .public__contacts__form {
       width: 30%;
       padding: 30px;
