@@ -33,7 +33,7 @@ function serveSass() {
 function buildCSS(done) {
   src('css/**/**.css')
   .pipe(cleanCSS({compatibility: 'ie8'}))
-  .pipe(dest('dist/css/'));
+  .pipe(dest('../dist/css/'));
   done();
   
 }
@@ -43,40 +43,40 @@ function buildJS(done) {
       min:'.js'
     }
   }))
-  .pipe(dest('dist/js'));
-  src('js/**.min.js').pipe(dest('dist/js'));
+  .pipe(dest('../dist/js'));
+  src('js/**.min.js').pipe(dest('../dist/js'));
   done();
 }
 
 function html(done) {
   src('**.html')
   .pipe(htmlmin({ collapseWhitespace: true }))
-  .pipe(dest('dist/'));
+  .pipe(dest('../dist/'));
   done();
 }
 
 function php(done) {
   src(['**.php'])
-    .pipe(dest('dist/'));
+    .pipe(dest('../dist/'));
   src('phpmailer/**/**')
-    .pipe(dest('dist/phpmailer/'));
+    .pipe(dest('../dist/phpmailer/'));
   done();
 }
 
 function fonts(done) {
   src(['fonts/**/**'])
-  .pipe(dest('dist/fonts'));
+  .pipe(dest('../dist/fonts'));
   done();
 }
 
 function imagemin(done) {
   src('img/**/**/**')
     .pipe(tinypng({key: 'b9WV0hHmlxrD0K6p1MxbNs3zywWbn9yF'}))
-    .pipe(dest('dist/img/'));
+    .pipe(dest('../dist/img/'));
   src('img/**/**/*.svg')
-    .pipe(dest('dist/img/'));
+    .pipe(dest('../dist/img/'));
   src('img/**/**/**')
-    .pipe(dest('dist/img/'));
+    .pipe(dest('../dist/img/'));
   done();
 }
 exports.serve = bs;

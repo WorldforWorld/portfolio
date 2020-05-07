@@ -1,0 +1,56 @@
+.message
+  opacity: 0
+  visibility: hidden
+  position: fixed
+  z-index: 199
+  left: 0
+  top: 0
+  bottom: 0
+  right: 0
+  width: 100%
+  height: 100%
+  background-color: rgba($background, 0.6)
+  display: flex
+  align-items: center
+  justify-content: center
+  &--visible
+    opacity: 1
+    visibility: visible
+  &__dialog
+    position: relative
+    max-width: 37rem
+    background: $background
+    padding: 2.357rem 3.5rem 1.928rem
+    color: $textcolor
+  &__close
+    outline: none
+    position: absolute
+    right: 0
+    top: 0
+    width: 28px
+    height: 28px
+    background: transparent url('../img/close.svg') no-repeat center
+    border: none
+    margin: 12px
+    cursor: pointer
+  &__text
+    display: inline-block
+    width: 100%
+    margin-bottom: 20px
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 26px
+    & a
+      color: $textcolor
+      text-transform: uppercase
+div.invalid
+  color: tomato
+  position: absolute
+  margin-top: -22px !important
+.form__input.invalid
+  border-bottom: 1px solid tomato
+div#userPhone3-error
+  margin-top: 38px !important
+div#userQuestion-error
+  margin-top: 96px !important

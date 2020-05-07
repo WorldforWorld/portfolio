@@ -1,0 +1,132 @@
+@media screen and ( max-width: 1222px )
+  .public
+    &__contacts
+      width: 40% !important
+      &__form
+        width: 40% !important
+@media screen and ( max-width: 873px )
+  .public
+    &__contacts
+      width: 50% !important
+      &__form
+        width: 50% !important
+@media screen and ( max-width: 788px )
+  .public
+    &__relation
+      flex-direction: column !important
+      align-items: center !important
+    &__contacts
+      width: 100% !important
+      margin-bottom: 40px
+      text-align: center
+      margin-right: 0 !important
+      &__link
+        margin: 0 auto
+      &__form
+        width: 80% !important
+@media screen and ( max-width: 767px )
+  .information
+    background: none !important
+    background-color: #000000 !important
+    height: 37vh !important
+    &__container
+      align-items: center !important
+@media screen and ( max-width: 703px )
+  .header
+    flex-direction: column-reverse !important
+    &__contacts
+      margin-bottom: 30px
+@media screen and ( max-width: 463px )
+  .portfolio
+    &__categories
+      display: flex
+      flex-direction: column
+      text-align: center
+      margin-bottom: 0 !important
+      & a
+        margin: 10px !important
+@media screen and ( max-width: 421px )
+  .portfolio
+    &__title
+      text-align: center
+@media screen and ( max-width: 380px )
+  .portfolio
+    &__card
+      width: 280px !important
+// hovet эффект 
+@media screen and ( min-width: 991px )
+  .header
+    &__contacts
+      &__image
+        & svg
+          &:hover path
+            fill: #ffffff
+          &:hover .fil11
+            fill: #ffffff
+          &:hover .cls-11
+            fill: #ffffff
+          &:hover .cls-22
+            fill: #000000
+          &:hover .cls-111
+            fill: #ffffff
+          &:hover .cls-222
+            fill: #372515
+          &:hover .cls-333
+            fill: #563622
+          &:hover .cls-444
+            fill: #090401
+          &:hover .cls-1
+            fill: #ffffff
+          &:hover .cls-2
+            fill: #000000
+          &:hover .fil0
+            fill: #ffffff
+          &:hover .fil1
+            fill: #000000
+  .information
+    &__button
+      &:hover
+        color: #000000
+        background: #ffffff
+        box-shadow: none
+      &:active
+        background: green
+  .portfolio
+    &__card
+      &__link
+        &:hover
+          background: rgba(255,255,255,0.9)
+        &:active
+          background: green
+          border-color: #ffffff
+      &:hover:before 
+        height: 100%
+      &:hover .portfolio__card__title,
+        display: block
+        bottom: 130px
+      &:hover .portfolio__card__link
+        display: block
+  .public
+    &__buttons
+      &:hover
+        background: #ffffff !important
+    &__contacts
+      &__link
+        & img
+        &:hover
+          &::before
+            content: ''
+            width: 27px
+            height: 2px
+            position: absolute
+            display: flex
+            top: 50%
+            left: -33px
+            background: #ffffff
+          &::after
+            content: ''
+            width: 27px
+            height: 2px
+            display: flex
+            align-self: center
+            background: #ffffff
