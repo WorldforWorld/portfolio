@@ -3,6 +3,8 @@
   flex-direction: column
   align-items: center
   margin-top: 50px
+  &__title
+    font-size: 30px
   &__subtitle
     max-width: 422px
     text-align: center
@@ -19,14 +21,16 @@
     flex-wrap: wrap
     justify-content: center
   &__card
-    margin: 10px
+    margin: 11px
     position: relative
     width: 300px
     height: 180px
-    border-radius: 5px
-    border: 1px solid $textcolor
-    padding: 10px
+    border-radius: 6px
+    padding: 1px
+    border: 1px solid rgba(255,255,255,0.43)
+    box-shadow: -1px 0px 8px 7px rgba(255,255,255,0.43)
     & img
+      border-radius: 5px
       width: 100%
       height: 100%
     &:before 
