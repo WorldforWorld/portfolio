@@ -1,6 +1,5 @@
 # Created by https://www.gitignore.io/api/node,windows
 # Edit at https://www.gitignore.io/?templates=node,windows
-
 ### Node ###
 # Logs
 logs
@@ -133,3 +132,5 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/node,windows
+# Игнорирование файла package-lock.json
+package-lock.json

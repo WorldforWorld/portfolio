@@ -12,10 +12,8 @@ $(function () {
       $('html, body').stop().animate({scrollTop : 0}, 800);
   });
   // прокрутка до нужного места
-  console.log('работаю');
   $('.information__buttons').click(function (e) { 
     e.preventDefault();
-    console.log('работаю');
     var id  = $(this).attr('href'),
         top = $(id).offset().top;
     $('body,html').animate({scrollTop: top}, 800);
@@ -47,8 +45,10 @@ $(function () {
   });
   // валидация формы
   var message = $('.message'),
+      shortcard = $('.shortcard'),
       closelMessageBtn = $('.message__close'),
-      modalHiddenMessage = $('.message__dialog');
+      modalHiddenMessage = $('.message__dialog'),
+      modalHiddenShortcard = $('.shortcard__dialog');
   jQuery(function($){
     message.mouseup(function (e){ // событие клика по веб-документу
       if (!modalHiddenMessage.is(e.target) && modalHiddenMessage.has(e.target).length === 0) { //если клик был не по нашему блоку и не по его дочерним элементам
@@ -56,9 +56,57 @@ $(function () {
       }
     });
   });
+  jQuery(function($){
+    $('div#bmc').mouseup(function (e){ // событие клика по веб-документу
+      if (!modalHiddenShortcard.is(e.target) && modalHiddenShortcard.has(e.target).length === 0) { //если клик был не по нашему блоку и не по его дочерним элементам
+        $('div#bmc').toggleClass('shortcard--visible');// скрываем его
+      }
+    });
+  });
+  jQuery(function($){
+    $('div#repair').mouseup(function (e){ // событие клика по веб-документу
+      if (!modalHiddenShortcard.is(e.target) && modalHiddenShortcard.has(e.target).length === 0) { //если клик был не по нашему блоку и не по его дочерним элементам
+        $('div#repair').toggleClass('shortcard--visible');// скрываем его
+      }
+    });
+  });
+  jQuery(function($){
+    $('div#witcher').mouseup(function (e){ // событие клика по веб-документу
+      if (!modalHiddenShortcard.is(e.target) && modalHiddenShortcard.has(e.target).length === 0) { //если клик был не по нашему блоку и не по его дочерним элементам
+        $('div#witcher').toggleClass('shortcard--visible');// скрываем его
+      }
+    });
+  });
 
   closelMessageBtn.on('click', function () {
     message.toggleClass('message--visible');
+  });
+  var modalShortcard = $('a.bmc-sales'),
+      modalRepair = $('a.repair-design'),
+      modalWitcher = $('a.modal-witcher');
+  modalShortcard.on('click', function (e) {
+    e.preventDefault()
+    $('div#bmc').toggleClass('shortcard--visible');
+  });
+  modalRepair.on('click', function (e) {
+    e.preventDefault()
+    $('div#repair').toggleClass('shortcard--visible');
+  });
+  modalWitcher.on('click', function (e) {
+    e.preventDefault()
+    $('div#witcher').toggleClass('shortcard--visible');
+  });
+  $('button#bmc-close').on('click', function (e) {
+    e.preventDefault()
+    $('div#bmc').toggleClass('shortcard--visible');
+  });
+  $('button#repair-close').on('click', function (e) {
+    e.preventDefault()
+    $('div#repair').toggleClass('shortcard--visible');
+  });
+  $('button#witcher-close').on('click', function (e) {
+    e.preventDefault()
+    $('div#witcher').toggleClass('shortcard--visible');
   });
   $('.form').validate({
     errorClass: "invalid",
@@ -93,6 +141,7 @@ $(function () {
         success: function (response) {
           $(form)[0].reset();
           message.toggleClass('message--visible');
+          ym(65865238,'reachGoal','form');
         },
         error: function (response) {
           console.error('Ошибка запроса ' + response);

@@ -4,13 +4,47 @@
       width: 40% !important
       &__form
         width: 40% !important
+@media screen and ( max-width: 912px )
+  .information
+    &__pasport
+      &__img 
+        width: 200px !important
+        height: 200px !important
+@media screen and ( max-width: 905px )
+  .shortcard
+    &__close
+      right: -17px !important
+      top: -4px !important
+    &__dialog
+      max-width: 450px !important
+      flex-direction: column !important
+    &__block
+      &:nth-of-type(1)
+        margin-bottom: 20px
+        width: 100% !important
+      &:nth-of-type(2)
+        width: 100% !important
+        margin-left: 0 !important
 @media screen and ( max-width: 873px )
   .public
     &__contacts
       width: 50% !important
       &__form
         width: 50% !important
+@media screen and ( max-width: 813px )
+  .header
+    &__button
+      &:nth-of-type(1)
+        display: none
+        
 @media screen and ( max-width: 788px )
+  .information
+    &__container
+      flex-direction: column-reverse !important
+      justify-content: center
+    &__block
+      width: 100% !important
+      align-items: center !important
   .public
     &__relation
       flex-direction: column !important
@@ -24,18 +58,22 @@
         margin: 0 auto
       &__form
         width: 80% !important
-@media screen and ( max-width: 767px )
-  .information
-    background: none !important
-    background-color: #000000 !important
-    height: 37vh !important
-    &__container
-      align-items: center !important
 @media screen and ( max-width: 703px )
   .header
     flex-direction: column-reverse !important
     &__contacts
       margin-bottom: 30px
+@media screen and ( max-width: 699px )
+  .header
+    &__button
+      &:nth-of-type(1)
+        display: block
+@media screen and ( max-width: 618px )
+  .header
+    &__contacts
+      flex-direction: column !important
+    &__button
+      margin-bottom: 10px
 @media screen and ( max-width: 463px )
   .portfolio
     &__categories
@@ -56,33 +94,9 @@
 // hovet эффект 
 @media screen and ( min-width: 991px )
   .header
-    &__contacts
-      &__image
-        & svg
-          &:hover path
-            fill: #ffffff
-          &:hover .fil11
-            fill: #ffffff
-          &:hover .cls-11
-            fill: #ffffff
-          &:hover .cls-22
-            fill: #000000
-          &:hover .cls-111
-            fill: #ffffff
-          &:hover .cls-222
-            fill: #372515
-          &:hover .cls-333
-            fill: #563622
-          &:hover .cls-444
-            fill: #090401
-          &:hover .cls-1
-            fill: #ffffff
-          &:hover .cls-2
-            fill: #000000
-          &:hover .fil0
-            fill: #ffffff
-          &:hover .fil1
-            fill: #000000
+    &__button, &__phone
+      &:hover
+        color: #a19b9b
   .information
     &__button
       &:hover
@@ -113,19 +127,4 @@
     &__contacts
       &__link
         &:hover
-          &::before
-            content: ''
-            width: 27px
-            height: 2px
-            position: absolute
-            display: flex
-            top: 50%
-            left: -33px
-            background: #ffffff
-          &::after
-            content: ''
-            width: 27px
-            height: 2px
-            display: flex
-            align-self: center
-            background: #ffffff
+          color: #a19b9b

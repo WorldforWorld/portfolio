@@ -32,7 +32,12 @@
     width: 30%
     display: flex
     flex-direction: column
+    align-items: flex-start
     margin-right: 65px
+    &__title
+      font-size: 28px
+      margin-top: 6px
+      margin-bottom: 10px
     &__link
       text-decoration: none
       color: $textcolor
@@ -40,6 +45,7 @@
       line-height: 2      
       position: relative
       display: flex
+      transition: 0.5s
       & img
         width: 15px
         margin-right: 5px
@@ -69,3 +75,19 @@
           border-radius: 5px
           margin-bottom: 20px
           outline: none
+  &__wrap
+    display: flex
+    flex-direction: row
+    align-items: center
+    margin-bottom: 15px
+    &:nth-of-type(1)
+      margin-bottom: 5px      
+  &__name
+    margin-right: 10px
+    font-size: 20px
+  &__politick
+    display: inline-block
+    text-align: center
+    color: $textcolor
+    margin-top: -5px
+    margin-bottom: -15px
