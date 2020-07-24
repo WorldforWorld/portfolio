@@ -1,2 +1,10 @@
 User-agent: *
-Disallow: /
+Disallow: /afrianska
+Disallow: /bmc-sales
+Disallow: /repair_design
+Disallow: /witcher
+Disallow: /packages
+Disallow: /test
+Disallow: /sertificate.png
+Disallow: /privacy.pdf
+Sitepam: https://yurikuzmichev.ru/sitemap.xml
